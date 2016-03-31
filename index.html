@@ -7,11 +7,25 @@
 </head>
 <body>
     <xml id="toolbox" style="display: none">
-       <category name="Eingabe">
-           <block type="input"></block>
-           <block type="input_item"></block>
+       <category name="Base">
            <block type="input_list"></block>
+           <block type="statement_list"></block>
        </category>
+       <category name="Eingabe">
+           <block type="input_vector"></block>
+           <block type="input_matrix"></block>
+           <block type="input_text"></block>
+           <block type="input_rangeslider"></block>
+           <block type="input_slider"></block>
+           <block type="input_colorbox"></block>
+           <block type="input_checkbox"></block>
+       </category>
+        <category name="Text">
+            <block type="text_print"></block>
+        </category>
+        <category name="Variable">
+            <block type="variable_get"></block>
+        </category>
     </xml>
     <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
 </body>
