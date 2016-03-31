@@ -1,0 +1,17 @@
+@interact
+def _(v=('vector', input_grid(1, 3, default=[[1,2,3]], to_value=lambda x: vector(flatten(x))))):
+    print v.norm()
+@interact
+def _(m=('matrix', identity_matrix(2))):
+    print m.eigenvalues()
+var('x,y')
+colormaps=sage.plot.colors.colormaps.keys()
+@interact
+def _(cmap=selector(colormaps)):
+    contour_plot(x^2-y^2,(x,-2,2),(y,-2,2),cmap=cmap).show()
+@interact
+def _(frame=checkbox(True, label='Use frame')):
+    show(plot(sin(x), (x,-5,5)), frame=frame)
+@interact
+def _(color=color_selector(widget='colorpicker', label="")):
+    print color
